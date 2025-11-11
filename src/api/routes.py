@@ -1165,11 +1165,22 @@ def calendly_webhook():
 
 
 # ----------------------#
-#  MENTORING            #
+#  MENTORING MENTOR     #
 # ----------------------#
 @api.route('/sessions/<int:mentor_id>', methods=['GET'])
 def manage_sessions(mentor_id):
     query = select(Mentoring).where(Mentoring.mentor_profile_id == mentor_id)
+    sessions = db.session.execute(query).scalars().all()
+
+    return jsonify([se.serialize() for se in sessions])
+
+
+# ----------------------#
+#  MENTORING STUDENT     #
+# ----------------------#
+@api.route('/sessions/student/<int:student_id>', methods=['GET'])
+def manage_sessions_student(student_id):
+    query = select(Mentoring).where(Mentoring.student_id == student_id)
     sessions = db.session.execute(query).scalars().all()
 
     return jsonify([se.serialize() for se in sessions])
