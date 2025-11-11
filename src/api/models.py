@@ -178,7 +178,9 @@ class MentorProfile(db.Model):
             'username': self.username,
             'name': self.name,
             'avatar': self.avatar,
-            'email': self.user.email if self.user else None
+            'email': self.user.email if self.user else None,
+            'skills': self.skills.strip("{}").split(",") if self.skills else [],
+            'interests': self.interests,
         }
 
 

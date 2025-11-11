@@ -1,6 +1,6 @@
 
 
-const CardsStudents = ({ student }) => {
+const CardMentors = ({ mentor }) => {
 
 
     const options = [
@@ -13,7 +13,7 @@ const CardsStudents = ({ student }) => {
         { value: "uiux", label: "Diseño UI/UX" },
     ]
 
-    const interestLabels = student?.interests
+    const interestLabels = mentor?.interests
         ?.replace(/[{}]/g, "")
         .split(",")
         .map(interest => {
@@ -24,26 +24,8 @@ const CardsStudents = ({ student }) => {
         })
         ?.join(", ");
 
-    const popularsSkill = [
-        { value: "react", label: "React" },
-        { value: "node", label: "Node.js" },
-        { value: "python", label: "Python" },
-        { value: "docker", label: "Docker" },
-        { value: "git", label: "Git" },
-    ];
 
-
-    const skills = student?.skills
-        ?.replace(/[{}]/g, "")
-        .split(",")
-        .map(skill => {
-            const trimmed = skill.trim();
-            const option = popularsSkill.find(opt => opt.value === trimmed);
-
-            return option?.label || trimmed;
-        })
-        ;
-
+    
 
 
 
@@ -57,16 +39,16 @@ const CardsStudents = ({ student }) => {
                     <div class="d-flex py-2 px-2">
                         <div className="d-flex flex-column mb-3 align-items-center ">
                             <div className="avatar-card-student">
-                                <img src={student?.avatar} alt="Avatar" />
+                                <img src={mentor?.avatar} alt="Avatar" />
                             </div>
                         </div>
                         <div className="me-3 p-2">
-                            <p class=" d-flex justify-content-start fs-4 card-title-student" >{student?.name}</p>
-                            <p className="d-flex">{student?.email}</p>
+                            <p class=" d-flex justify-content-start fs-4 card-title-student" >{mentor?.name}</p>
+                            <p className="d-flex">{mentor?.email}</p>
                             <p className="d-flex">{interestLabels}</p>
 
                             <div className="d-flex justify-items-center mentor-card-skills mb-2">
-                                {skills?.map((s, index) => (
+                                {mentor.skills?.map((s, index) => (
                                     <>
                                         <div className="px-2 rounded-pill student-card-skill" key={index}>{s}</div>
                                     </>
@@ -84,4 +66,4 @@ const CardsStudents = ({ student }) => {
     )
 }
 
-export default CardsStudents
+export default CardMentors

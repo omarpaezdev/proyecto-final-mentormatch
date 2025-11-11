@@ -381,9 +381,25 @@ userServices.getMentorings = async (mentorId) =>{
     return data;
   } catch (error) {
     console.log(error)
-    return { success: false, error: "Error al verificar status" }
+    return { success: false, error: "Error al consultar mentorias" }
   }
 }
+
+
+/*Obteniendo las mentorias segun el id del estudiante */
+userServices.getMentoringsStudent = async (studentId) =>{
+  try {
+    const resp = await fetch(url + `/api/sessions/student/${studentId}`, {
+      method: 'GET'
+    });
+    const data = await resp.json();
+    return data;
+  } catch (error) {
+    console.log(error)
+    return { success: false, error: "Error al consultar mentorias" }
+  }
+}
+
 
 
 
