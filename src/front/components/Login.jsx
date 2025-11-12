@@ -57,7 +57,7 @@ const Login = () => {
 
     return (
         <div className="container justify-items-center w-50 my-5">
-            <h1 className="text-center">Login <br /> <span className="span-text">MentorMatch</span></h1>
+            <h1 className="text-center col-12">Login </h1>
             <div className="d-flex justify-content-center" >
                 <img src="src/front/assets/img/MM-2.png" alt="Hero Illustration" className="logo-image"></img>
             </div>

@@ -33,7 +33,7 @@ const ROLES = {
     student: [
         PERMISSIONS.PANEL_VIEW,
         PERMISSIONS.CONFIGURATIONSTUDENT_VIEW,
-        PERMISSIONS.MESSAGES_VIEW,
+        //PERMISSIONS.MESSAGES_VIEW,
        // PERMISSIONS.REVIEWS_VIEW,
         PERMISSIONS.SESSIONS_VIEW
     ]
@@ -188,7 +188,7 @@ const SideBar = ({ userRole, userEmail }) => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
             </nav>
-            <div className="offcanvas-lg offcanvas-end sidebar" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+            <div className="offcanvas-lg offcanvas-end sidebar col-sm-12 col-md-12 col-lg-12" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
                 <div className="offcanvas-header">
 
                     <button type="button" className="btn-close bg-white" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
