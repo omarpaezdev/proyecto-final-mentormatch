@@ -128,7 +128,7 @@ const ConfigurationStudent = () => {
           {success && <AlertSuccess message="Perfil guardado correctamente" />}
           {alertError && <AlertError message="Error al guardar el perfil" />}
 
-          <form className="p-3" onSubmit={handleSubmit}>
+          <form className="p-3 row col-sm-12 " onSubmit={handleSubmit}>
             {/* Información personal */}
             <div className="form-metorprofile mb-5 p-5">
               <div className="h4 titles-form">Información personal</div>
@@ -260,3 +260,4 @@ const ConfigurationStudent = () => {
 };
 
 export default ConfigurationStudent;
+
