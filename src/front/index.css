@@ -751,10 +751,13 @@ h2 {
 .view-profile-mentor-img {
   height: 10em;
   width: 10em;
-  border-radius: 80px;
-  border-color: #ffffff;
+  border-radius: 50%;
+  border: 0.1em solid #ffffff;
+  object-fit: cover;
   border-width: 0.1em;
   border-style: solid;
+   backface-visibility: hidden; 
+    display: block;
 }
 
 .custom-tabs .nav-link.active {
