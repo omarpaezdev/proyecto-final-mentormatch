@@ -374,7 +374,7 @@ userServices.getCalendlyStatus = async (mentorId) => {
 /*Obteniendo las mentorias segun el id del mentor */
 userServices.getMentorings = async (mentorId) => {
   try {
-    const resp = await fetch(url + `/api/sessions/${mentorId}`, {
+    const resp = await fetch(url + `api/sessions/${mentorId}`, {
       method: 'GET'
     });
     const data = await resp.json();
@@ -389,7 +389,7 @@ userServices.getMentorings = async (mentorId) => {
 /*Obteniendo las mentorias segun el id del estudiante */
 userServices.getMentoringsStudent = async (studentId) => {
   try {
-    const resp = await fetch(url + `/api/sessions/student/${studentId}`, {
+    const resp = await fetch(url + `api/sessions/student/${studentId}`, {
       method: 'GET'
     });
     const data = await resp.json();
