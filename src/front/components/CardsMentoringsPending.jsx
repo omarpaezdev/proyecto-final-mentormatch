@@ -1,4 +1,9 @@
+import useGlobalReducer from "../hooks/useGlobalReducer";
+
+
 const CardsMentoringsPending = ({ session }) => {
+     const { store, dispatch } = useGlobalReducer()
+
     const formatFecha = (fechaISO) => {
         const fecha = new Date(fechaISO);
         return new Intl.DateTimeFormat("es-ES", {
@@ -26,7 +31,7 @@ const CardsMentoringsPending = ({ session }) => {
                 <div className="card card-student text-center mb-3 flex-fill ">
                     <div className="d-flex flex-column align-items-start  py-3 px-3">
                         
-                            <p className=" fs-5 fw-semibold card-title-student mb-1" >{session?.student_profile?.name}</p>
+                            <p className=" fs-5 fw-semibold card-title-student mb-1" >{store.user.role==='mentor' ? session?.student_profile?.name : session?.mentor_profile?.name}</p>
                             <p className="fs-6 text-white mb-2" >{session?.topic?.title}</p>
                             <p className=" text-light small  " >{formatFecha(session?.start_time)}</p>
                         
