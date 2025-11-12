@@ -3,7 +3,7 @@ export const initialStore = () => {
     user: JSON.parse(localStorage.getItem("user")),
     userRole: localStorage.getItem("userRole"),
     auth: localStorage.getItem("user") ? true : false,
-    icon: "https://collection.cloudinary.com/dp6e1sg4y/9410c6ef1a334fb29bba76bd411dde8b",
+    icon: "https://res.cloudinary.com/dp6e1sg4y/image/upload/v1762979051/MM-1.png",
     nameApp: "MentorMatch",
     message: null,
     todos: [

@@ -14,7 +14,7 @@ export function Hero() {
                 <div className="carousel-item active">
                     <section className="hero-section d-flex flex-column justify-content-center align-items-center text-center py-5 px-3">
                         <div className="hero-content container">
-                            <img src="https://collection.cloudinary.com/dp6e1sg4y/fe8f219bffdc1cc6b1e5b37b088ec91c" alt="Hero Illustration" className="logo-image mb-4" />
+                            <img src="https://res.cloudinary.com/dp6e1sg4y/image/upload/v1762979051/MM-2.png" alt="Hero Illustration" className="logo-image mb-4" />
                             <h1 className="fw-bold mb-3">
                                 Encuentra el mentor perfecto para alcanzar <span className="span-text">tus objetivos</span>
                             </h1>
