@@ -100,9 +100,11 @@ const ViewProfileMentor = () => {
                         <li className="nav-item" role="presentation">
                             <button className="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true"><span className="me-1"><User /></span>Perfil Mentor</button>
                         </li>
+                        {/*
                         <li className="nav-item" role="presentation">
                             <button className="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane" type="button" role="tab" aria-controls="reviews-tab-pane" aria-selected="false"><span className="me-1"><Star /></span>Reseñas</button>
                         </li>
+                        */}
                         <li className="nav-item" role="presentation">
                             <button className="nav-link" id="sesion-tab" data-bs-toggle="tab" data-bs-target="#sesion-tab-pane" type="button" role="tab" aria-controls="sesion-tab-pane" aria-selected="false"><span className="me-1"><CalendarDays /></span>Sesiones</button>
                         </li>
@@ -121,7 +123,7 @@ const ViewProfileMentor = () => {
 
 
                         </div>
-                        <div className="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab" tabindex="0">...</div>
+                      { /* <div className="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab" tabindex="0">...</div>*/}
                         <div className="tab-pane fade" id="sesion-tab-pane" role="tabpanel" aria-labelledby="sesion-tab" tabindex="0">
                             <div className="row container d-flex">
                                 {!store?.auth &&

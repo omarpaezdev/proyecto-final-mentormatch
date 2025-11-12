@@ -62,7 +62,7 @@ const Panel = () => {
         <>
             {role === 'mentor' &&
                 <>
-                    <h2 className="my-5 fs-1">Tus estadisticas como {role}</h2>
+                    <h2 className="my-5 fs-1">Tu resumen</h2>
                     <div className="div-statistics p-5">
                         <div className="mb-5">
                             <div className="progress-stacked">
