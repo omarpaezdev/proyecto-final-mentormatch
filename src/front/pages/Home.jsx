@@ -8,6 +8,7 @@ import { Hero } from "../components/Hero.jsx";
 import HowItWorks from "../components/HowItWorks.jsx";
 import TechFocus  from "../components/TechFocus.jsx";
 import CTARegister from "../components/CTARegister.jsx";
+import { Footer } from "../components/Footer.jsx";
 export const Home = () => {
 
 	const { store, dispatch } = useGlobalReducer()
@@ -48,7 +49,7 @@ export const Home = () => {
 
 			<CTARegister/>
 
-			
+			<Footer/>
 
 		</div>
 

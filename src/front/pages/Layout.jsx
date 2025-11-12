@@ -14,7 +14,7 @@ export const Layout = () => {
             {!hideLayout && <Navbar />}
             <Outlet />
 
-            {!hideLayout && <Footer />}
+            {/*!hideLayout && <Footer />*/}
         </ScrollToTop>
     )
 }

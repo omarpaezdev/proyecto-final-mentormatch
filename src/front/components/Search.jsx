@@ -37,7 +37,7 @@ const Search = () => {
 
             <div className="d-flex justify-content-center align-items-center my-5 col-12">
                 <div className="search w-50 d-flex flex-column  justify-items-center  p-4">
-                    <p>En que tecnologia necesitas ayuda?</p>
+                    <p>¿En que tecnología te puedo ayudar?</p>
                     <input type="text" className="search-input" value={search} onChange={handleChange} placeholder="Ej: Python, JavaScript, UX"></input>
                     <div className="d-flex justify-content-center align-items-center col-sm-12">
                         <button type="submit" className="btn btn-sm search-btn" onClick={handleSearch}><span className='me-1 col-sm-12'><SearchCode /></span>Buscar Mentores</button>
