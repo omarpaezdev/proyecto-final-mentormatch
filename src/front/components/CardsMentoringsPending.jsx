@@ -31,9 +31,9 @@ const CardsMentoringsPending = ({ session }) => {
                 <div className="card card-student text-center mb-3 flex-fill ">
                     <div className="d-flex flex-column align-items-start  py-3 px-3">
                         
-                            <p className=" fs-5 fw-semibold card-title-student mb-1" >{store.user.role==='mentor' ? session?.student_profile?.name : session?.mentor_profile?.name}</p>
-                            <p className="fs-6 text-white mb-2" >{session?.topic?.title}</p>
-                            <p className=" text-light small  " >{formatFecha(session?.start_time)}</p>
+                            <p className=" fs-5 fw-semibold card-title-student mb-3" >{store.user.role==='mentor' ? session?.student_profile?.name : session?.mentor_profile?.name}</p>
+                            <p className="fs-5 text-white mb-3" >{session?.topic?.title}</p>
+                            <p className=" text-light fs-4  " >{formatFecha(session?.start_time)}</p>
                         
                         
                     </div>
