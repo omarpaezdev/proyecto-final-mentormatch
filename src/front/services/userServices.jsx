@@ -184,7 +184,7 @@ userServices.allTypesMentoring = async (userId) => {
     if (!resp.ok || data.error) {
       return { success: false, error: data.message || "Error obtener tipos de mentorias" }
     }
-    
+
     return { success: true, data }
   } catch (error) {
     console.log(error)
@@ -331,7 +331,7 @@ userServices.updateStudentProfile = async (formData, userId) => {
 };
 
 /*==============================================*/
-/* Desencadena el flujo de conexion con calendly*/ 
+/* Desencadena el flujo de conexion con calendly*/
 /*==============================================*/
 userServices.connectCalendly = async (mentorId) => {
   try {
@@ -353,7 +353,7 @@ userServices.connectCalendly = async (mentorId) => {
 }
 
 /*==========================================*/
-/* Verifica estatus de conexion con calendly*/ 
+/* Verifica estatus de conexion con calendly*/
 /*==========================================*/
 
 
@@ -372,7 +372,7 @@ userServices.getCalendlyStatus = async (mentorId) => {
 
 
 /*Obteniendo las mentorias segun el id del mentor */
-userServices.getMentorings = async (mentorId) =>{
+userServices.getMentorings = async (mentorId) => {
   try {
     const resp = await fetch(url + `/api/sessions/${mentorId}`, {
       method: 'GET'
@@ -387,7 +387,7 @@ userServices.getMentorings = async (mentorId) =>{
 
 
 /*Obteniendo las mentorias segun el id del estudiante */
-userServices.getMentoringsStudent = async (studentId) =>{
+userServices.getMentoringsStudent = async (studentId) => {
   try {
     const resp = await fetch(url + `/api/sessions/student/${studentId}`, {
       method: 'GET'
@@ -416,7 +416,7 @@ userServices.getMentoringsStudent = async (studentId) =>{
  */
 userServices.requestPasswordReset = async (email) => {
   try {
-    const resp = await fetch(url + '/api/request-password-reset', {
+    const resp = await fetch(url + 'api/request-password-reset', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
