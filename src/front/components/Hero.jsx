@@ -32,7 +32,7 @@ export function Hero() {
                 <div className="carousel-item">
                     <section className="hero-section d-flex flex-column justify-content-center align-items-center text-center py-5 px-3">
                         <div className="hero-content container">
-                            <img src="src/front/assets/img/MM-2.png" alt="Hero Illustration" className="logo-image mb-4" />
+                            <img src="https://res.cloudinary.com/dp6e1sg4y/image/upload/v1762979051/MM-2.png" alt="Hero Illustration" className="logo-image mb-4" />
                             <h1 className="fw-bold mb-3">
                                 Comparte tu experiencia. Inspira el <span className="span-text">crecimiento</span> de otros
                             </h1>
