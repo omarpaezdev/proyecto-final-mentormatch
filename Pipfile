@@ -24,6 +24,7 @@ flask-admin = "*"
 wtforms = "<3.0"
 requests = "*"
 flask-mail = "*"
+tomli = "*"
 
 [requires]
 python_version = "3.13"
