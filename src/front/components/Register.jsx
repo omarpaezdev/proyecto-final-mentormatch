@@ -35,7 +35,7 @@ const Register = () => {
         <div className="container justify-items-center w-50 my-5 ">
             <h1 className="text-center col-sm-12 ">Registro  </h1>
             <div className="d-flex justify-content-center" >
-                <img src="src/front/assets/img/MM-2.png" alt="Hero Illustration" className="logo-image"></img>
+                <img src="https://res.cloudinary.com/dp6e1sg4y/image/upload/v1762979051/MM-2.png" alt="Hero Illustration" className="logo-image"></img>
             </div>
             <div className="d-flex justify-content-center">
                 <form className="form-style p-4" onSubmit={handleSubmit}>

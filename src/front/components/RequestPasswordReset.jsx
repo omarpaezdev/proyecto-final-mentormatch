@@ -39,7 +39,7 @@ const RequestPasswordReset = () => {
 
             <div className="d-flex justify-content-center">
                 <img
-                    src="src/front/assets/img/MM-2.png"
+                    src="https://res.cloudinary.com/dp6e1sg4y/image/upload/v1762979051/MM-2.png"
                     alt="Hero Illustration"
                     className="logo-image"
                 />
