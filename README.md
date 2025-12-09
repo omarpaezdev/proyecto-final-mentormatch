@@ -1,81 +1,93 @@
-# WebApp boilerplate with React JS and Flask API
+<h1>MentorMatch</h1>
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+Web donde los mentores con experiencia y conocimiento en el area Tech pueden crear su perfil y crear sus tipos de mentorias y configurar sus sesiones. Los estudiantes pueden crear su perfil y realizar la busqueda del mentor que brinde mentorias en el tema especifico en el cual esta interesado. Al encontrar el mentor, el estudiante puede realizar una reserva de sesion. La web hace uso de la API de calendly usando la cuenta del mentor, previamente autorizada.
 
-- Documentation can be found here: https://4geeks.com/docs/start/react-flask-template
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to Render [in just a few steps here](https://4geeks.com/docs/start/deploy-to-render-com).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
 
-### 1) Installation:
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
 
-It is recomended to install the backend first, make sure you have Python 3.10, Pipenv and a database engine (Posgress recomended)
+<h2> 🚀 Características </h2>
+<ul>
+    <li>Perfiles de mentor y estudiantes con privilegios de acceso</li>
+    <li>Conexion con API de calendly</li>
+    <li>Restablecimiento de contraseña</li>
+</ul>
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+<h2>Vistas del Proyecto</h2>
+<img width="650" height="700" alt="1" src="https://github.com/user-attachments/assets/de99702d-df98-459c-b424-f3a72f1f4b3f" />
+<img width="650" height="700" alt="3" src="https://github.com/user-attachments/assets/cc5d0aec-2382-41e3-8bdc-bebecf8ad8b5" />
+<img width="650" height="700" alt="6" src="https://github.com/user-attachments/assets/b7034659-2b9f-4643-a930-18c51a5f0535" />
+<img width="650" height="700" alt="8" src="https://github.com/user-attachments/assets/af458020-34db-41b6-b77d-2b66aa924c9b" />
+<img width="650" height="700" alt="11" src="https://github.com/user-attachments/assets/3bb3e9a6-520b-4ed5-b04b-f47a51696717" />
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
 
-### Undo a migration
 
-You are also able to undo a migration by running
 
-```sh
-$ pipenv run downgrade
-```
+## 🛠️ Tecnologías
 
-### Backend Populate Table Users
+- React
+- Python 
+- Flask
+- SQLAlchemy
+- Bootstrap
 
-To insert test users in the database execute the following command:
 
-```sh
-$ flask insert-test-users 5
-```
+## 📦 Instalación
 
-And you will see the following message:
+```bash
+# Clona el repositorio
+git clone https://github.com/omarpaezdev/proyecto-final-mentormatch
+
+# Navega al directorio
+cd tu-proyecto
+
+# Instala las dependencias
+npm install
 
 ```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
+
+## 🔧 Configuración
+
+Es importane configurar el .env con las key de Calendly, debes crear una app de tu cuenta develop de calendly.
+
+
+- CALENDLY_CLIENT_ID= Id generada por calendly
+- CALENDLY_CLIENT_SECRET= Secret generada por calendly
+- CALENDLY_REDIRECT_URI= "URL_FRONT_END"/api/calendly/callback 
+
+se debe configurar en la app de calendly la REDIRECT_URI con este formato.
+
+## 💻 Uso
+
+```bash
+# Comando para ejecutar el proyecto front end
+npm run start
+
+# Comando para ejecutar el proyecto backend
+pipenv run start
+
+
 ```
 
-### **Important note for the database and the data inside it**
 
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
 
-### Front-End Manual Installation:
+## 📁 Estructura del Proyecto
 
--   Make sure you are using node version 20 and that you have already successfully installed and runned the backend.
+```
+proyecto/
+├── src/
+│   ├── api/
+│   └── front/
+|       └─── /assets/
+|       └─── /components/
+|       └─── /hooks/
+|       └─── /pages/
+|       └─── /services/
+|       └─── index.css
+|       └─── main.jsx
+|       └─── routes.jsx
+|       └─── store.jsx
+└── README.md
+```
 
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
-
-## Publish your website!
-
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://4geeks.com/docs/start/deploy-to-render-com).
-
-### Contributors
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
